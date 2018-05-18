@@ -1,5 +1,4 @@
 const graphql = require('graphql')
-const _ = require('lodash')
 const Actor = require('../model/actor')
 const Movie = require('../model/movie')
 
@@ -10,45 +9,6 @@ const { GraphQLObjectType,
         GraphQLSchema,
         GraphQLList,
         GraphQLNonNull} = graphql
-
-const movies = [
-  {
-    name: 'Schindler\'s List',
-    year: 1993,
-    id: '1',
-    actorId: '3'
-  },
-  {
-    name: 'Pulp Fiction',
-    year: 1994,
-    id: '2',
-    actorId: '2'
-  },
-  {
-    name: 'Forrest Gump',
-    year: 1994,
-    id: '3',
-    actorId: '1'
-  }
-]
-
-const actors = [
-  {
-    name: 'Tom Hanks',
-    age: 61,
-    id: "1"
-  },
-  {
-    name: 'Samuel L. Jackson',
-    age: 69,
-    id: '2'
-  },
-  {
-    name: 'Liam Neeson',
-    age: 65,
-    id: '3'
-  }
-]
 
 const MovieType = new GraphQLObjectType({
   name: 'Movie',
